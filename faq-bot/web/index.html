@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0e14" />
+    <title>Kai Education — помощник команды</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <a class="brand" href="/" aria-label="Kai Education — главная"
+        >kai <span>/</span> <small>education</small></a
+      >
+      <nav aria-label="Основная навигация">
+        <a href="#rehearsal">Репетиция</a
+        ><a
+          class="external"
+          href="https://github.com/BAITC-Hacks/hack-dae029b3-kai-education"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 18 18 6M6 6h12v12" /></svg
+        ></a>
+      </nav>
+    </header>
+    <main>
+      <section class="workspace" aria-labelledby="title">
+        <div class="intro">
+          <h1 id="title">
+            Меньше вопросов.<br /><span>Больше действий.</span>
+          </h1>
+          <p>Всё о репетиции — в одном разговоре.</p>
+        </div>
+        <section class="chat" aria-labelledby="chat-title">
+          <div class="chat-header">
+            <h2 id="chat-title">Помощник команды</h2>
+            <button id="reset" class="reset" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 4v16M4 12h16" /></svg
+              >Новый диалог
+            </button>
+          </div>
+          <div class="conversation" id="conversation">
+            <div class="message bot">
+              <span class="avatar" aria-hidden="true">k<span>/</span></span>
+              <p>
+                Привет! Я помогу разобраться с репетицией.<br />О чём хотите
+                узнать?
+              </p>
+            </div>
+            <div class="topics" aria-label="Быстрые вопросы">
+              <button data-question="Когда начинается репетиция?">Время</button
+              ><button data-question="Какая у нас команда?">Команда</button
+              ><button data-question="Какой у нас трек?">Трек</button
+              ><button data-question="Куда сдавать работу?">Сдача</button
+              ><button data-question="Какие будут призы?">Призы</button>
+            </div>
+            <div
+              id="messages"
+              role="log"
+              aria-label="История диалога"
+              aria-live="polite"
+              aria-relevant="additions"
+            ></div>
+          </div>
+          <div class="composer-area">
+            <form id="form">
+              <label class="sr-only" for="question"
+                >Ваш вопрос о репетиции</label
+              ><input
+                id="question"
+                name="question"
+                placeholder="Задайте свой вопрос…"
+                maxlength="500"
+                autocomplete="off"
+                required
+              /><button
+                class="send"
+                id="send"
+                aria-label="Отправить вопрос"
+                type="submit"
+                disabled
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 20V4m-7 7 7-7 7 7" />
+                </svg>
+              </button>
+            </form>
+            <p class="caption" id="status" role="status">
+              Ответы из FAQ команды
+            </p>
+          </div>
+        </section>
+      </section>
+      <aside id="rehearsal" aria-labelledby="info-title">
+        <h2 id="info-title">На одной странице</h2>
+        <p class="aside-subtitle">Главное о репетиции.</p>
+        <dl>
+          <div>
+            <dt>Формат</dt>
+            <dd>Учебные кейсы</dd>
+          </div>
+          <div>
+            <dt>На один кейс</dt>
+            <dd>30–60 минут</dd>
+          </div>
+          <div>
+            <dt>Сдача</dt>
+            <dd>Репозиторий команды</dd>
+          </div>
+        </dl>
+        <a
+          class="repo external"
+          href="https://github.com/BAITC-Hacks/hack-dae029b3-kai-education"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Открыть GitHub
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 18 18 6M6 6h12v12" /></svg
+        ></a>
+        <p class="help">
+          Не нашли ответ?<br />Уточните детали у организаторов.
+        </p>
+      </aside>
+    </main>
+    <footer>
+      <span>Kai Education</span><span>Учимся. Пробуем. Создаём.</span>
+    </footer>
+  </body>
+</html>
